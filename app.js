@@ -41,8 +41,8 @@ app.use('/api/stop', (request, response) => {
 });
 
 const options = {
-  readinessURL: '/test/01/health',
-  livenessURL: '/test/01/health',
+  readinessURL: '/test/02/health',
+  livenessURL: '/test/02/health',
   livenessCallback: (request, response) => {
     return isOnline ? response.send('OK') : response.sendStatus(500);
   }
